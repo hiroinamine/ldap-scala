@@ -27,13 +27,16 @@ https://github.com/Normation/scala-ldap
 
 
 ## LDAP URLs:
-pattern: ldap://host:port/DN?attributes?scope?filter
+LDAP url pattern: `ldap://host:port/DN?attributes?scope?filter`
 
-Default:
-	- port: 389
-	- DN: zero-length DN (server root DSE)
-	- attributes: all atributes
-	- scope: restricted base entry
-	- filter: (objectClass=*)
+Default propperty:
+- port: 389
+- DN: zero-length DN (server root DSE)
+- attributes: all atributes
+- scope: restricted base entry
+- filter: (objectClass=*)
 
+E.g.:
+```
 ldap://ds.example.com:389/dc=example,dc=com?givenName,sn,cn?sub?(uid=john.doe)
+```
